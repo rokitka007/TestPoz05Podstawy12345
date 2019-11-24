@@ -1,5 +1,12 @@
+import dziedziczenie.Man;
+import dziedziczenie.Woman;
+import obiektowosc.Car;
+import obiektowosc.Human;
+
 public class Obiektowosc {
     public static void main(String[] args) {
+
+        Human.opiszKlase();
 
         Human czlowiek1 = new Human("Kasia", "Nowakowska", 1991);
         //Metoda przedstawSie jest dostepna, bo jest public
@@ -29,5 +36,20 @@ public class Obiektowosc {
         bmw.przyspiesz(152);
         bmw.opiszAuto();
 //        System.out.println(bmw.obliczWiek());
+
+        //Obiekt klasy Woman dziedziczacej po Human
+        Woman kobieta1 = new Woman("Kasia", "Kowalska", 2007);
+        kobieta1.przedstawSie();
+        kobieta1.setBirthYear(2009);
+        kobieta1.getName();
+
+        Man mezczyzna1 = new Man("Tomek", "Gorny",1998);
+        mezczyzna1.setWaga(70);
+        mezczyzna1.ocenSile();
+        mezczyzna1.przedstawSie();
+
+        mezczyzna1.setWaga(105);
+        mezczyzna1.ocenSile();
+        mezczyzna1.przedstawSie();
     }
 }
